@@ -1,0 +1,65 @@
+name = 'Geek Label'
+description = Uses the Bootstrap Framework Sass source files and must be compiled (not for beginners).
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[content_mid] 		= 'Content Mid'
+regions[content_prebottom] = 'Content Prebottom'
+regions[content_bottom] = 'Content Bottom'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/custom.css
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;
+
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/affix.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/alert.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/button.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/carousel.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/collapse.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/dropdown.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/modal.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/tooltip.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/popover.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/scrollspy.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/tab.js'
+scripts[] = 'bootstrap/assets/javascripts/bootstrap/transition.js'
+scripts[] = 'js/custom.js'
+; Disable the CDN provider so compiled source files can be used.
+settings[bootstrap_cdn] = ''
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Breakpoints
+;;;;;;;;;;;;;;;;;;;;;
+
+breakpoints[mobile]					= (max-width: 480px)
+breakpoints[screen-xs-max] 	= (max-width: 767px)
+breakpoints[screen-sm-min]	= (min-width: 768px)
+breakpoints[screen-sm-max]	= (max-width: 991px)
+breakpoints[screen-md-min]	= (min-width: 992px)
+breakpoints[desktop] 				= (min-width: 1200px)
+
+multipliers[mobile][] = 1.5x
+multipliers[mobile][] = 2x

@@ -1,0 +1,335 @@
+//-----------------------------------
+// Variables
+//-----------------------------------
+
+// Main Colors - Pallete -------------------
+$main-highlight:      #D83454;
+$region-grey:         #F1F2F2;
+$layer-white:         #FFFFFF;
+$header-font-color:   #403F41;
+$border-grey:         #CACACA;
+
+
+// Fonts -------------------
+@font-face {
+  font-family: 'Museo';
+  src: url('../font/museo300.otf');
+}
+
+$responsive-fontsize-fallback: 41px;
+$responsive-font-size: 2vw;
+$reg-font-size: 28px; 
+
+// Spacing -------------------
+$responsive-space-fallback: 100px;
+$responsive-space: 4.5vw;
+
+//-----------------------------------
+// Base
+//-----------------------------------
+body {
+  font-family: 'Museo', sans-serif;
+  $reg-font-size: 28px;
+}
+form {
+    text-align: initial;
+}
+
+h2, .h2{ 
+  font-size: 48px;
+  @media (min-width: 991px){
+    font-size: 80px;
+    font-size: 5vw;
+  }
+}
+
+
+//-----------------------------------
+// Reusable Classes 
+//-----------------------------------
+
+// Design Classes ------------
+.centered-blocks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.main-highlight{
+  background: $main-highlight;
+}
+.region-gray-center {
+  background: $region-grey;
+  float: none; 
+  text-align: center;
+}
+.highlight-word {
+  color: $main-highlight;
+}
+.centered-blocks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+// Button Classes ------------
+.btn-scroll {
+  font-size: 0;
+  width: 72px;
+  height: 84px;
+  display: inline-block;
+  overflow: hidden;
+  background-image: url(../images/button_set.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -5px; 
+}
+.btn-white {
+  background-position: -158px;
+}
+.btn-black {
+  background-position: -82px -1px;
+}
+
+// Layout Classes ------------
+.container-680 {
+  max-width: 680px;
+}
+
+// Module Classes ------------
+.block-scroll {
+  height: 100%;
+  height: 100vh;
+  width: 100%;
+  align-items: flex-end;
+  @extend .centered-blocks;
+  
+  @media (min-width: 768px){
+     align-items: center;
+  }
+}
+.block-neutral-flex{
+  display: block;
+}
+.block-minheight {
+  height: initial;
+}
+.block-contact {
+  max-width: 630px;
+  @media (max-width: 480px) {
+      max-width: 250px;
+  }
+}
+.block-vertical {
+  height: 100%;
+  height: 100vh;
+  width: 100%;
+  @extend .centered-blocks;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.block-scroll-end {
+  @extend .block-scroll;
+  padding-bottom: 20px;
+}
+.brand-quote {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    font-size: $responsive-fontsize-fallback;
+    font-size: $responsive-font-size;
+    margin-top: $responsive-space-fallback;
+    margin-top: $responsive-space;
+    margin-bottom: 60px;
+    margin-bottom: 2.5vw;    
+  }
+}
+
+
+// Services ------------
+.services-block {
+  & h2 {
+    width: 100%;
+  }
+}
+.services-view-block {
+  & .view-content {
+     @media (min-width: 991px){
+       display: flex;
+       flex: 1; 
+     } 
+  }
+}
+.service-row {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media (min-width:768px){
+     display: block;
+  }
+  & div{
+     margin: 0 5px; 
+  }
+}
+
+%spacing {
+  @media(min-width: 768px){
+    padding-top: $responsive-space;
+    padding-bottom: $responsive-space;
+  }
+}
+
+.service-item {
+    @extend %spacing;
+    @media (min-width: 991px){
+      font-size: $reg-font-size;
+      margin-top: $responsive-space-fallback;
+      margin-top: $responsive-space;
+      margin-bottom: $responsive-space-fallback;
+      margin-bottom: $responsive-space;
+    }
+}
+
+//-----------------------------------
+// Overrides
+//-----------------------------------
+.navbar {
+  margin-bottom: 0;
+}
+.lead {
+  color: #fff;
+  max-width: 255px;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  @media (min-width: 768px){
+    font-size: 30px;
+    max-width: 100%;
+  }
+}
+.navbar {
+  .logo {
+    margin-right: 0;
+  }
+}
+.container {
+  @media (min-width: 1200px){
+    width: 1500px;
+  }
+
+}
+// Images -------------------
+.logo-img {
+  max-width: 225px;
+  @media(min-width: 768px){
+     max-width: 380px;
+  }
+}
+
+.img-responsive {
+  margin: 0 auto;
+} 
+
+// Webform ------------------
+.form-design {
+  font-size: $reg-font-size;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  font-size: $reg-font-size;
+}
+.webform-submit {
+  @extend .form-design;
+  transition: background 0.3s ease; 
+  background: $main-highlight;
+  &:hover {
+    background: #B01635;
+    color: #fff;
+  }
+}
+.webform-submit, .form-field {
+    @media (max-width: 767px) { 
+    font-size: 20px;
+    height: 54px;
+  }
+}
+.form-textarea {
+  height: 222px;
+}
+.phone {
+  font-size: $reg-font-size;
+  margin-top: 40px;
+}
+
+
+// Gmap ----------------------
+.views-field-field-map {
+  @extend %spacing;  
+}
+.map-mobile-spacing {
+  height: initial;
+}
+.gmap-popup {
+  text-align: initial;
+}
+.form-field {
+  @extend .form-design;
+  background: #fff;
+}
+
+// Carousel -------------------
+.client-carousel {
+  display: inline;
+  width: 100%;
+  
+  & .view-footer {
+    margin-top: $responsive-space-fallback;
+    margin-top: $responsive-space;    
+  }
+}
+.owl-carousel {
+  @extend %spacing;
+}
+
+.owl-theme  {
+  & .owl-controls {
+    & .owl-buttons {
+        display: none;
+        position: absolute;
+        bottom: 50%;
+        width: 100%;
+        @media (min-width: 768px){
+          display: block;
+        }
+        
+      & div {
+        font-size: 0;
+        width: 18px;
+        height: 30px;
+        background: url('../images/pager.png') no-repeat;
+      }
+      & .owl-prev {
+        float: left;
+      }
+      & .owl-next {
+        background-position: -25px 0;
+        float: right;
+      }
+    }
+  } 
+}
+
+.owl-pagination {
+  display: block;
+  @media (min-width: 768px){
+       display: none;
+  }
+}
